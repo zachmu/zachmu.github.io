@@ -345,3 +345,14 @@ function copyToClipboard() {
         }
     });
 }
+
+const params = new URLSearchParams(window.location.search);
+
+for (let i = 1; i <= 7; i++) {
+    line = "line" + i;
+    if (params.get(line)) {
+        formElement = document.getElementById(line);
+        formElement.value = params.get(line);
+        lineChanged(line)
+    }
+}
