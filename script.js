@@ -323,6 +323,18 @@ function lineChanged(target) {
     formElement = document.getElementById(target);
 
     line.textContent = formElement.value;
+
+    // update search params
+    search = "";
+    for (let i = 1; i <= 7; i++) {
+        if (i > 1) {
+            search = search + "&";
+        }
+        line = "line" + i;
+        formElement = document.getElementById(line);
+        search = search + line "=" formElement.value;
+    }
+    window.location.search = search;
 }
 
 function copyToClipboard() {
