@@ -325,16 +325,16 @@ function lineChanged(target) {
     line.textContent = formElement.value;
 
     // update search params
-    search = "";
-    for (let i = 1; i <= 7; i++) {
-        if (i > 1) {
-            search = search + "&";
+    if (history.pushState) {
+        let searchParams = new URLSearchParams();
+        for (let i = 1; i <= 7; i++) {
+            line = "line" + i;
+            formElement = document.getElementById(line);
+            searchParams.set(key, formElement.value;);
         }
-        line = "line" + i;
-        formElement = document.getElementById(line);
-        search = search + line + "=" + formElement.value;
+        let newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchParams.toString();
+        window.history.pushState({path: newurl}, '', newurl);
     }
-    window.location.search = search;
 }
 
 function copyToClipboard() {
