@@ -330,7 +330,7 @@ function lineChanged(target) {
         for (let i = 1; i <= 7; i++) {
             line = "line" + i;
             formElement = document.getElementById(line);
-            searchParams.set(key, formElement.value;);
+            searchParams.set(key, formElement.value);
         }
         let newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + searchParams.toString();
         window.history.pushState({path: newurl}, '', newurl);
