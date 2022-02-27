@@ -20,7 +20,8 @@ input {
 }
 
 #sign {
-  padding: 10px;
+    padding: 10px;
+    background: black;
 }
 
 .sign-outline {
