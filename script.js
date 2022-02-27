@@ -332,7 +332,7 @@ function lineChanged(target) {
         }
         line = "line" + i;
         formElement = document.getElementById(line);
-        search = search + line "=" formElement.value;
+        search = search + line + "=" + formElement.value;
     }
     window.location.search = search;
 }
