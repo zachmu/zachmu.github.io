@@ -1,0 +1,64 @@
+body {
+  background: black;
+}
+
+div {
+  font-family: 'Urbanist';
+  text-transform: uppercase;
+}
+
+form {
+  color: white;
+}
+
+input {
+  width: 400px;
+}
+
+#save {
+  width: 100px;
+}
+
+#sign {
+  padding: 10px;
+}
+
+.sign-outline {
+  outline: 2px;
+  outline-color: white;
+  outline-style: solid;
+  width: 620px;
+}
+
+.sign-content {
+  width: 600px;
+  margin: 10px;
+}
+
+.line1 {
+  color: white;
+}
+
+.line2 {
+  color: #b55d19;
+}
+
+.line3 {
+  color: #d8d120;
+}
+
+.line4 {
+  color: #1297b4;
+}
+
+.line5 {
+  color: #94c13d;
+}
+
+.line6 {
+  color: #ef3897;
+}
+
+.line7 {
+  color: white;
+}
