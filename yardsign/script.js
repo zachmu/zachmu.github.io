@@ -368,5 +368,7 @@ for (let i = 1; i <= 7; i++) {
     }
     formElement = document.getElementById(line);
     formElement.value = content;
-    lineChanged(line)
+    if (content.length > 0) {
+        lineChanged(line)
+    }
 }
