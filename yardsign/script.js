@@ -362,13 +362,9 @@ const params = new URLSearchParams(window.location.search);
 
 for (let i = 1; i <= 7; i++) {
     line = "line" + i;
-    content = params.get(line);
-    if (!content) {
-        content = "";
-    }
-    formElement = document.getElementById(line);
-    formElement.value = content;
-    if (content.length > 0) {
+    if (params.has(line)) {
+        formElement = document.getElementById(line);
+        formElement.value = params.get(line);
         lineChanged(line)
     }
 }
